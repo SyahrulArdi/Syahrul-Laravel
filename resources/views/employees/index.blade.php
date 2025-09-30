@@ -1,9 +1,6 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <title>Daftar Pegawai</title>
-</head>
+@extends('master')
+@section('title', 'Daftar Pegawai')
+@section('content')
 <body>
     <div class="container mt-5">
         <h1 class="mb-4">Daftar Pegawai</h1>
@@ -48,5 +45,4 @@
             </tbody>
         </table>
     </div>
-</body>
-</html>
+@endsection
