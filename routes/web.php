@@ -1,25 +1,14 @@
 <?php
 
-use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\EmployeeController;
+use App\Http\Controllers\DepartmentController;
+use App\Http\Controllers\PositionController;
+use App\Http\Controllers\AttendanceController;
+use App\Http\Controllers\SalariesController;
+use Illuminate\Support\Facades\Route;
 
-Route::resource('employees',EmployeeController::class);
-#Route::get('/employee', [EmployeeController::class, 'index']);
-
-#default route
-
-Route::get('/', function () {
-    return view('welcome');
-});
-
-Route::get('/hello', function () {
-return 'Halo, Laravel!';
-});
-
-Route::get('/employee/{id}', function ($id) {
-return "Data pegawai dengan ID: " . $id;
-});
-
-Route::get('/employee/{nama?}', function ($nama = 'Tidak Diketahui') {
-return "Nama Pegawai: " . $nama;
-});
+Route::resource('employees', EmployeeController::class);
+Route::resource('departments', DepartmentController::class);
+Route::resource('positions', PositionController::class);
+Route::resource('attendances', AttendanceController::class);
+Route::resource('salaries', SalariesController::class);
